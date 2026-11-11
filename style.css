@@ -1,0 +1,72 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Segoe UI", Arial, sans-serif; color: #0f2a5c; background: #fff; line-height: 1.5; }
+a { text-decoration: none; color: inherit; }
+
+/* Header */
+#fadlan_header { display: flex; justify-content: space-between; align-items: center; padding: 14px 8%; background: #fff; position: sticky; top: 0; z-index: 10; box-shadow: 0 1px 6px rgba(0,0,0,.08); }
+.fadlan_logo { font-weight: 800; font-size: 20px; color: #1d4ed8; }
+.fadlan_logo span { color: #0f2a5c; }
+.fadlan_menu { display: flex; gap: 28px; font-weight: 600; font-size: 14px; }
+.fadlan_menu a { padding-bottom: 4px; border-bottom: 2px solid transparent; }
+.fadlan_menu a:hover, .fadlan_menu_active { color: #1d4ed8; border-bottom-color: #1d4ed8; }
+
+/* Hero */
+#fadlan_home { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 60px 8%; background: linear-gradient(135deg,#eef4ff,#dbe8ff); }
+.fadlan_hero_text { flex: 1; max-width: 520px; }
+.fadlan_hello { font-size: 22px; font-weight: 600; }
+.fadlan_name { font-size: 52px; line-height: 1.1; color: #1d4ed8; margin: 4px 0 10px; }
+.fadlan_role { font-weight: 700; margin-bottom: 12px; }
+.fadlan_intro { color: #334e7d; margin-bottom: 22px; }
+.fadlan_buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.fadlan_btn { padding: 10px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; border: 2px solid #1d4ed8; }
+.fadlan_btn_fill { background: #1d4ed8; color: #fff; }
+.fadlan_btn_line { background: #fff; color: #1d4ed8; }
+.fadlan_hero_art { flex: 1; display: flex; justify-content: center; }
+.fadlan_laptop { width: 340px; max-width: 100%; }
+.fadlan_screen { background: #0f2a5c; color: #60a5fa; font-size: 64px; font-weight: 800; height: 200px; border: 8px solid #cbd5e1; border-radius: 10px 10px 0 0; display: flex; align-items: center; justify-content: center; }
+.fadlan_base { height: 14px; background: #cbd5e1; border-radius: 0 0 14px 14px; margin: 0 -18px; }
+
+/* Sections */
+#fadlan_about, #fadlan_skills, #fadlan_projects { padding: 36px 8% 12px; }
+.fadlan_title { font-size: 24px; margin-bottom: 16px; position: relative; padding-bottom: 6px; }
+.fadlan_title::after { content: ""; position: absolute; left: 0; bottom: 0; width: 48px; height: 3px; background: #1d4ed8; }
+
+/* About */
+.fadlan_about_box { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; }
+.fadlan_about_text { flex: 1; min-width: 260px; max-width: 640px; }
+.fadlan_info { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 14px; font-size: 14px; }
+.fadlan_photo { width: 190px; height: 170px; border-radius: 10px; background: linear-gradient(135deg,#bfdbfe,#3b82f6); color: #fff; font-size: 44px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+
+/* Skills */
+.fadlan_skill_grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.fadlan_skill { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid #dbe3f3; border-radius: 8px; font-size: 14px; font-weight: 600; background: #fff; }
+.fadlan_skill b { width: 26px; height: 26px; border-radius: 6px; color: #fff; font-size: 11px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+/* Projects */
+.fadlan_project_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.fadlan_card { border: 1px solid #dbe3f3; border-radius: 8px; padding: 10px; background: #fff; }
+.fadlan_thumb { height: 90px; border-radius: 6px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 800; color: #1e3a8a; }
+.fadlan_card h3 { font-size: 15px; }
+.fadlan_card p { font-size: 12px; color: #4b5f85; margin: 2px 0 6px; }
+.fadlan_card a { font-size: 12px; font-weight: 700; color: #1d4ed8; }
+
+/* Footer */
+#fadlan_footer { margin-top: 36px; background: #0b1f4a; color: #fff; padding: 20px 8%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; font-size: 13px; }
+.fadlan_foot_brand strong { display: block; font-size: 16px; }
+.fadlan_foot_brand small { color: #9fb4e0; }
+.fadlan_copy { width: 100%; color: #9fb4e0; border-top: 1px solid #1e3a78; padding-top: 8px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .fadlan_skill_grid { grid-template-columns: repeat(2, 1fr); }
+  .fadlan_project_grid { grid-template-columns: repeat(2, 1fr); }
+  #fadlan_home { flex-direction: column; text-align: center; }
+  .fadlan_buttons { justify-content: center; }
+  .fadlan_name { font-size: 40px; }
+}
+@media (max-width: 560px) {
+  #fadlan_header { flex-direction: column; gap: 8px; }
+  .fadlan_menu { gap: 16px; }
+  .fadlan_project_grid { grid-template-columns: 1fr; }
+}
